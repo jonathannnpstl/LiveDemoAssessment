@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Real Estate</title>
   <link rel="stylesheet" href="styles.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +17,6 @@
       <div class="nav-left">
         <ul>
           <li><a href="#">PROPERTIES</a></li>
-          <li><a href="#">HOME SEARCH</a></li>
         </ul>
       </div>
       <div class="nav-center">
@@ -21,8 +24,7 @@
       </div>
       <div class="nav-right">
         <a href="#">CONTACT</a>
-        <span class="phone">310.285.7508</span>
-        <button id="menu-btn">MENU ☰</button>
+        <button id="menu-btn"> ☰</button>
       </div>
     </nav>
 
@@ -220,6 +222,66 @@ Our team works hard everyday to grow and learn, so that we may continue to excel
     </form>
   </div>
 </section>
+
+<section class="gallery-section">
+  <h2 class="gallery-title">PHOTO GALLERY</h2>
+
+  <div class="stagger-grid">
+    <div class="gallery-item tall">
+      <img src="images/house1.webp" alt="Modern Villa">
+    </div>
+    <div class="gallery-item wide">
+      <img src="images/house2.webp" alt="Luxury Penthouse">
+    </div>
+    <div class="gallery-item">
+      <img src="images/house3.webp" alt="Coastal Home">
+    </div>
+    <div class="gallery-item large">
+      <img src="images/house4.webp" alt="Mountain Estate">
+    </div>
+    <div class="gallery-item tall">
+      <img src="images/house5.webp" alt="Urban Apartment">
+    </div>
+    <div class="gallery-item">
+      <img src="images/house6.webp" alt="Classic Home">
+    </div>
+    <div class="gallery-item wide">
+      <img src="images/house7.webp" alt="Desert Retreat">
+    </div>
+  </div>
+</section>
+
+
+<section class="services-section">
+  <h2 class="services-title">OUR SERVICES</h2>
+
+  <div class="services-grid">
+    <div class="service-card" style="background-image: url('images/service1.webp')">
+      <div class="overlay"></div>
+      <div class="service-content">
+        <h3>Real Estate Done Right</h3>
+        <p>Nervous about your property adventure? Don’t be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image: url('images/service2.webp')">
+      <div class="overlay"></div>
+      <div class="service-content">
+        <h3>Commercial & Residential</h3>
+        <p>Large or small, condo or mansion, we can find it and get at the price that's right. Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community. Happy to help you find where to put you hard-earned dollars.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image: url('images/service3.webp')">
+      <div class="overlay"></div>
+      <div class="service-content">
+        <h3>Rely on Expertise</h3>
+        <p>If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion. We make sure you feel confident and educated every step of the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact-section">
   <h2 class="section-title">CALL OR VISIT</h2>
   <div class="contact-container">
@@ -260,13 +322,32 @@ Our team works hard everyday to grow and learn, so that we may continue to excel
   </div>
   
 </section>
-
 <section>
    <div class="map-container">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25761.816350528694!2d-115.98142147064208!3d36.185359732816345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c639a25ba6af0f%3A0x5c7351dde0fbb39a!2sMarci%20Metzger%20-%20THE%20RIDGE%20REALTY%20GROUP%20-%20B1002787!5e0!3m2!1sen!2sph!4v1761089079661!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>
   </main>
+
+  <footer class="footer">
+  <div class="social-icons">
+    <a href="#" class="social-link" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="social-link" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="social-link" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="social-link" aria-label="Yelp">
+      <i class="fab fa-yelp"></i>
+    </a>
+  </div>
+
+  <p> COPYRIGHT &copy; 2023 MARCI MELTZGER HOMES - ALL RIGHTS RESERVED.</p>
+</footer>
+
 
   <script src="script.js"></script>
 </body>

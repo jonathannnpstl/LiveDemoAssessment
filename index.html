@@ -9,6 +9,7 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
+<link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -223,34 +224,97 @@ Our team works hard everyday to grow and learn, so that we may continue to excel
   </div>
 </section>
 
-<section class="gallery-section">
-  <h2 class="gallery-title">PHOTO GALLERY</h2>
-
-  <div class="stagger-grid">
-    <div class="gallery-item tall">
-      <img src="images/house1.webp" alt="Modern Villa">
+<section class="badge-section">
+  <div class="badge-container">
+    <div class="badge">
+      <img src="/images/badge1.webp" alt="Award 1">
     </div>
-    <div class="gallery-item wide">
-      <img src="images/house2.webp" alt="Luxury Penthouse">
+    <div class="badge">
+      <img src="/images/badge2.webp" alt="Award 2">
     </div>
-    <div class="gallery-item">
-      <img src="images/house3.webp" alt="Coastal Home">
+    <div class="badge">
+      <img src="/images/badge3.webp" alt="Award 3">
     </div>
-    <div class="gallery-item large">
-      <img src="images/house4.webp" alt="Mountain Estate">
-    </div>
-    <div class="gallery-item tall">
-      <img src="images/house5.webp" alt="Urban Apartment">
-    </div>
-    <div class="gallery-item">
-      <img src="images/house6.webp" alt="Classic Home">
-    </div>
-    <div class="gallery-item wide">
-      <img src="images/house7.webp" alt="Desert Retreat">
+    <div class="badge">
+      <img src="/images/badge4.webp" alt="Award 4">
     </div>
   </div>
+
 </section>
 
+<section class="gallery-section">
+    <h3 class="gallery-title">PHOTO GALLERY</h3>
+
+    <div class="swiper" id="propertySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-image" style="background-image:url('/images/house1.webp');"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-title">House 1</div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-image" style="background-image:url('/images/house2.webp');"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-title">House 2</div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-image" style="background-image:url('/images/house3.webp');"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-title">House 3</div>
+
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-image" style="background-image:url('/images/house4.webp');"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-title">House 4</div>
+     
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-image" style="background-image:url('/images/house5.webp');"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-title">House 5</div>
+            
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-image" style="background-image:url('/images/house6.webp');"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-title">House 6</div>
+            
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-image" style="background-image:url('/images/house7.webp');"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-title">House 7</div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="swiper-button-prev" aria-label="Previous"></div>
+      <div class="swiper-button-next" aria-label="Next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+</section>
 
 <section class="services-section">
   <h2 class="services-title">OUR SERVICES</h2>
@@ -349,6 +413,41 @@ Our team works hard everyday to grow and learn, so that we may continue to excel
 </footer>
 
 
-  <script src="script.js"></script>
+<script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+  <script>
+
+    const swiper = new Swiper('#propertySwiper', {
+      loop: true,                
+      speed: 6000,              
+      autoplay: {
+        delay: 0,                 
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,  
+      },
+      slidesPerView: 'auto',     
+      spaceBetween: 24,
+      grabCursor: true,        
+      centeredSlides: false,
+      freeMode: false,           
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: { spaceBetween: 12 },
+        600: { spaceBetween: 16 },
+        980: { spaceBetween: 24 }
+      }
+    });
+
+    // Improve dragging UX: when user drags, pause autoplay; autoplay resumes due to disableOnInteraction:false
+    swiper.el.addEventListener('mousedown', () => swiper.autoplay.stop());
+    swiper.el.addEventListener('mouseup', () => swiper.autoplay.start());
+    swiper.el.addEventListener('touchstart', () => swiper.autoplay.stop());
+    swiper.el.addEventListener('touchend', () => swiper.autoplay.start());
+  </script>
 </body>
 </html>

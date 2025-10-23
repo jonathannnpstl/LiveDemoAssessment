@@ -429,6 +429,30 @@ main {
 }
 
 
+.badge-section {
+  background-color: #ffffff;
+  padding: 120px 10%;
+  text-align: center;
+}
+
+.badge-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .gallery-section {
   padding: 80px 5% 250px 5%;
@@ -809,3 +833,108 @@ main {
 .social-link:nth-child(2):hover { background: #e4405f; } /* Instagram */
 .social-link:nth-child(3):hover { background: #0077b5; } /* LinkedIn */
 .social-link:nth-child(4):hover { background: #d32323; } /* Yelp */
+
+
+
+.carousel-wrap{
+  width: 100%;
+}
+
+.section-title {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin: 0 0 18px 10px;
+}
+
+/* Swiper container */
+.swiper {
+  height: 800px;
+  padding: 18px 8px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  overflow: visible;
+}
+
+/* Each slide behaves like a standing rectangle card */
+.swiper-slide {
+  width: 320px; /* default card width; slidesPerView:auto respects this */
+  height: 420px;
+  display: flex;
+  align-items: flex-end; /* text sits at bottom */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transform-origin: center;
+  cursor: grab;
+  background: #222;
+}
+
+.swiper-slide:active { cursor: grabbing; }
+
+.slide-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.95) contrast(1.02);
+  transition: transform 0.6s ease, filter 0.4s ease;
+  transform-origin: center;
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.62) 20%, rgba(0,0,0,0.22) 60%, transparent 100%);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: #fff;
+  width: 100%;
+}
+
+.slide-title {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.02em;
+}
+
+.slide-meta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  opacity: 0.95;
+}
+
+/* Hover / focus effect */
+.swiper-slide:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+.swiper-slide:hover .slide-image {
+  transform: scale(1.06);
+  filter: saturate(1.05) contrast(1.06);
+}
+
+/* Swiper controls (optional) */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+  --swiper-navigation-size: 42px;
+  opacity: 0.9;
+  transition: opacity .2s;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover { opacity: 1; }
+
+/* Hide pagination on small screens */
+.swiper-pagination { display: none; }
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  .swiper-slide { width: 280px; height: 380px; }
+}
+@media (max-width: 680px) {
+  .swiper-slide { width: 220px; height: 300px; }
+  .section-title { font-size: 22px; margin-left: 6px; }
+}
